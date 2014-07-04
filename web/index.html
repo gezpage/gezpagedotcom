@@ -8,6 +8,7 @@
         <title>gezpage dot com</title>
 
         <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/bootstrap-responsive.css">
         <link rel="stylesheet" href="/css/bootstrap-switch.css">
 
         <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
@@ -31,11 +32,29 @@
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
 
+            $(function() {
+
+                $('.eml').each(function() {
+                    var code = $(this).text();
+                    var email = code.replace(/AT/, '@').replace(/DOT/g, '.').replace(/_/g, '');
+                    $(this).text(email)
+                        .attr('href', 'mailto:'+email)
+                        .show();
+                });
+
+                _386 = { onePass: true, speedFactor: 0.25 };
+
+            });
+
         </script>
 
         <style>
+
             a:hover { text-decoration:none; }
+            body { visibility: hidden; }.
+
         </style>
+
     </head>
 
     <body>
@@ -45,78 +64,88 @@
                 <h1>gezpage <small>dot com</small></h1>
             </div>
 
-            <div style="margin-bottom:20px;">
+            <div class="lead">
                 <h5>Web development specialist</h5>
             </div>
 
-            <div class="row">
+            <br/>
 
-                <div class="col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Social / Contact</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>
-                                <a href="mailto:gez@gezpage.com">
-                                    <img src="/images/icons/GMail.png" />
-                                    gez@gezpage.com</a>
-                            </p>
-                            <p>
-                                <a href="http://twitter.com/gezpage">
-                                    <img src="/images/icons/Twitter.png" />
-                                    Twitter</a>
-                            </p>
-                            <p>
-                                <a href="http://www.linkedin.com/pub/gez-page/a/83b/62a">
-                                    <img src="/images/icons/LinkedIN.png" />
-                                    Linkedin</a>
-                            </p>
-                        </div>
-                    </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Social / Contact</h3>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Tech Profiles</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>
-                                <a href="http://github.com/gezpage">Github</a>
-                            </p>
-                            <p>
-                                <a href="http://bitbucket.org/gezpage">Bitbucket</a>
-                            </p>
-                            <p>
-                                <a href="https://coderwall.com/gezpage">Coderwall</a>
-                            </p>
-                        </div>
-                    </div>
+                <div class="panel-body">
+                    <p>
+                        <img src="/images/icons/GMail.png" />
+                        <a class="eml" href="#">gez_AT_gez_page_DOT_com</a>
+                    </p>
+                    <p>
+                        <img src="/images/icons/Twitter.png" />
+                        <a href="http://twitter.com/gezpage">Twitter</a>
+                    </p>
+                    <p>
+                        <img src="/images/icons/LinkedIN.png" />
+                        <a href="http://www.linkedin.com/pub/gez-page/a/83b/62a">Linkedin</a>
+                    </p>
                 </div>
+            </div>
 
-                <div class="col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Guitar Songbook</h3>
-                        </div>
-                        <div class="panel-body">
-                            <a href="http://songbook.gezpage.com">songbook.gezpage.com</a>
-                        </div>
-                    </div>
+            <br/>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tech Profiles</h3>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Turned on by Default</h3>
-                        </div>
-                        <div class="panel-body">
-                            <a href="http://turnedonbydefault.com">turnedonbydefault.com</a>
-                        </div>
-                    </div>
+                <div class="panel-body">
+                    <p>
+                        <a href="http://github.com/gezpage">Github</a>
+                    </p>
+                    <p>
+                        <a href="http://bitbucket.org/gezpage">Bitbucket</a>
+                    </p>
+                    <p>
+                        <a href="https://coderwall.com/gezpage">Coderwall</a>
+                    </p>
                 </div>
+            </div>
 
+            <br/>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Songbook - Guitar Music</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <a href="http://songbook.gezpage.com">songbook.gezpage.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Turned on by Default - Tech Blog</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <a href="http://turnedonbydefault.gezpage.com">turnedonbydefault.gezpage.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Site Design - Bootstrap 386!</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <a href="https://github.com/kristopolous/BOOTSTRA.386">github.com/kristopolous/BOOTSTRA.386</a>
+                    </p>
+                </div>
             </div>
 
         </div>
